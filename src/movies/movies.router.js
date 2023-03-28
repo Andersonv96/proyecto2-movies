@@ -1,7 +1,7 @@
 const router = require('express').Router()
 
-const userServices = require('./movies.services');
+const moviesServices = require('./movies.services');
 
-router.get('/user', userServices.getAllUsers)
-router.post('/users', userServices.postNewUser)
-router.get('/users/:id', userServices.getUserById)
+router.get('/movies', moviesServices.getAllmovies)
+router.post('/movies', moviesServices.postNewmovies)
+router.get('/movies/:id', moviesServices.getmovieById)

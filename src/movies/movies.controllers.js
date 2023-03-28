@@ -1,20 +1,22 @@
 const movieDb = [
     {
         id: 1,
-        name: 'Sahid',
-        email: "sahid.kick@academlo.com",
-        password: 'root'
+        title: "Harry Potter y el caliz de fuego",
+        description: "Lorem Ipsum",
+        year: 2005,
+        director: "Mike Newell"
     },
     {
         id: 2,
-        name: 'Alejandro Aguilar',
-        email: "alejandro@gmail.com",
-        password: 'root'
+        title: "Harry Potter pricipe",
+        description: "Lorem Ipsum",
+        year: 2003,
+        director: "Newell"
     }
 ]
 let movieId = 3
 
-const findAllmovies = async () => {
+const findAllMovies = async () => {
     return movieDb
 }
 const findmovieById = async (id) => {
@@ -22,18 +24,19 @@ const findmovieById = async (id) => {
     return data
 }
 
-const createmovie = async (movieObj) => {
+const createMovie = async (movieObj) => {
     const newmovie = {
         id: movieId++,
-        name: movieObj.name || 'Anonymous',
-        email: movieObj.email || 'example@example.com',
-        password: movieObj.password || 'root'
+        title: movieObj.title || 'Anonymous',
+        description: movieObj.description || 'Lorem Ipsum',
+        year: movieObj.year || '2999',
+        director: movieObj.director || 'Anonymous'
     }
     movieDb.push(newmovie)  
        return newmovie
 }   
 
 module.exports = { 
-    findAllmovies, 
+    findAllMovies, 
     findmovieById, 
-    createmovie, }
+    createMovie, }
