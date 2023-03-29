@@ -1,6 +1,8 @@
 const express = require('express')
 
-const moviesRouter = require ('./movies.router')
+
+const moviesRouter = require('./movies/movies.router')
+
 const app = express()
 
 app.use(express.json())
@@ -16,5 +18,3 @@ app.listen(3000, () => {
 })
 
 module.exports = app
-
-// hola
