@@ -19,7 +19,7 @@ let movieId = 3
 const findAllMovies = async () => {
     return movieDb
 }
-const findmovieById = async (id) => {
+const findMovieById = async (id) => {
     const data = movieDb.find(movie => movie.id === id)
     return data
 }
@@ -38,5 +38,7 @@ const createMovie = async (movieObj) => {
 
 module.exports = { 
     findAllMovies, 
-    findmovieById, 
-    createMovie, }
+    findMovieById, 
+    createMovie 
+    
+}
